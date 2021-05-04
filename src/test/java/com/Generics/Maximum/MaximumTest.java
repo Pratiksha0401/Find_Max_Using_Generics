@@ -2,31 +2,30 @@ package com.Generics.Maximum;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Assert.*;
+import static org.junit.Assert.*;
 import org.junit.Test;
-
 
 public class MaximumTest 
 {
     
     @Test
-    public void shouldReturnTrue_WhenMaxIntegerAt1stPosition ()
+    public void shouldReturnTrue_WhenMaxDoubleAt1stPosition ()
     {
-    	int max=Maximum.maxInteger(5,1,2);
-        assertEquals( 5 , max );
+    	double max=Maximum.maxDouble(5.1,1.3,2.8);
+        assertEquals( 5.1 , max , 0);
     }
     
     @Test
-    public void shouldReturnTrue_WhenMaxIntegerAt2ndPosition()
+    public void shouldReturnTrue_WhenMaxDoubleAt2ndPosition()
     {
-    	int max=Maximum.maxInteger(1,5,2);
-        assertEquals( 5 , max );
+    	double max=Maximum.maxDouble(1.3,5.1,2.8);
+        assertEquals( 5.1 , max , 0 );
     }
     
     @Test
-    public void shouldReturnTrue_WhenMaxIntegerAt3rdPosition()
+    public void shouldReturnTrue_WhenMaxDoubleAt3rdPosition()
     {
-    	int max=Maximum.maxInteger(1,2,5);
-        assertEquals( 5 , max );
+    	double max=Maximum.maxDouble(1.3,2.8,5.1);
+        assertEquals( 5.1 , max , 0 );
     }
 }
