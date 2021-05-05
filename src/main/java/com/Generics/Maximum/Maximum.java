@@ -1,5 +1,8 @@
 package com.Generics.Maximum;
 
+import java.util.Collections;
+import java.util.Iterator;
+
 public class Maximum 
 {	
 
@@ -9,7 +12,15 @@ public class Maximum
 			if(a[i].compareTo(max) > 0 )
 				max=a[i];	
 		}
+		printMax(a, max);
 		return max;
+		
 	}
 	
+	public static <E> void printMax(E[] a , E max) {
+		for(int i=1 ; i< a.length ; i+=a.length) {
+			System.out.println("Max is : "+max );
+		}	
+		
+	}
 }
